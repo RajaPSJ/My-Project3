@@ -1,0 +1,243 @@
+04_01_sum
+
+package pkg04_01_sum;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random ();
+        int sum = 0;
+        for (int i=0; i<10; i++)
+        {
+            int number = generator.nextInt(10);
+            System.out.println(number);
+            sum += number;
+        }
+        System.out.println("the sum is:"+sum);
+    }
+    
+}
+
+
+
+
+04_02_count:
+
+package pkg04_02_count;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random ();
+        int count = 0;
+        int i;
+        for (i = 0; i < 10; i++) {
+            int number = generator.nextInt(6)+1;
+            System.out.println(number);
+            if (number == 5 || number == 6)
+            {
+                count++;
+            }
+        }
+        System.out.println("The number of 5s and 6s is :"+count);
+    }
+    
+}
+
+
+
+
+04_03_Maximum:
+
+
+
+package pkg04_03_maximum;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random();
+        int number  = generator.nextInt(100) + 1;
+        int max = number;
+        int maxposition =0;
+        System.out.println(number);
+        for (int i = 1; i < 10; i++)
+        {
+            number = generator.nextInt(100) + 1;
+            System.out.println(number);
+            if (number>max)
+            {
+                max = number;
+                maxposition = i;
+            }
+        }
+        System.out.println("The maximum number is : "+max+"and its position is : "+maxposition);
+    }
+}
+
+
+
+04_04_Minimum:
+
+
+package pkg04_04_minimum;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random();
+        int number  = generator.nextInt(100) + 1;
+        int min = number;
+        int minposition =0;
+        System.out.println(number);
+        for (int i = 1; i < 10; i++)
+        {
+            number = generator.nextInt(100) + 1;
+            System.out.println(number);
+            if (number<min)
+            {
+                min = number;
+                minposition = i;
+            }
+        }
+        System.out.println("The minimum number is : "+min+"and its position is : "+minposition);
+    }
+}
+
+
+04_05_Liniear_Search:
+
+
+package pkg04_05_linear_search;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random();
+        int key = 6;
+        int position = -1;
+        for (int i = 0; i < 25; i++) {
+            int number = generator.nextInt(6) + 1;
+            System.out.println(number);
+            if (position == -1 && number == key) {
+                position = i;
+            }
+        }
+        System.out.println("The position of the first 6 is : "+position);
+    }
+    
+}
+
+
+
+
+04_06_Select:
+
+
+package pkg04_06_select;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random();
+        for (int i = 0; i < 10; i++) {
+            int number = generator.nextInt(6)+1;
+            if(number %2 == 0)
+            {
+                System.out.println("*");
+            }
+            System.out.println(number);
+        }
+        
+    }
+    
+}
+
+
+
+
+
+04_07_sum_magic:
+
+
+package pkg04_07_sum_magic;
+
+import java.util.Random;
+
+/**
+ *
+ * @author rajap
+ */
+public class Main {
+    public static final int NUM_OF_NUMBERS = 10;
+    public static final int LIMIT = 10;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Random generator = new Random ();
+        int sum = 0;
+        for (int i=0; i<NUM_OF_NUMBERS; i++)
+        {
+            int number = generator.nextInt(LIMIT);
+            System.out.println(number);
+            sum += number;
+        }
+        System.out.println("the sum is:"+sum);
+    }
+    
+}
